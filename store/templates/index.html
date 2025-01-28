@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<style>
+.bg-img {
+    background-image: url("https://iamosahan.com/wrapbootstrap-pillarix/furnitore/img/subscribe.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+
+</style>
+
+<div class="bg-img">
+    <h1 class="display-4 p-2 text-center fw-bold" style="margin-bottom: 400px;color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " >Beatifully Crafted Modern Furniture <br> <a href="{%url 'product-list'%}" class=" rounded bg-gradient ">shop now </a></h1>
+  </div>
+
+  <div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm bg-white rounded bg-body-tertiary">
+                <i class="bi bi-hand-thumbs-up fs-1 text-secondary"></i>
+                <h5 class="fw-bold mt-3">High Quality</h5>
+                <p class="text-muted">We take pride in delivering only the best—crafted with precision, tested for excellence.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm bg-white rounded">
+                <i class="bi bi-truck fs-1 text-secondary"></i>
+                <h5 class="fw-bold mt-3">Fast Delivery</h5>
+                <p class="text-muted">Your time matters. That’s why we ensure swift and reliable delivery, every time.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 shadow-sm bg-white rounded">
+                <i class="bi bi-shield-check fs-1 text-secondary"></i>
+                <h5 class="fw-bold mt-3">Best Warranty</h5>
+                <p class="text-muted">Our commitment doesn’t end with your purchase. Enjoy peace of mind with our industry-leading warranty.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{%endblock%}

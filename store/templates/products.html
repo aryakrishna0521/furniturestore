@@ -1,0 +1,76 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<section>
+
+        </header>
+
+        
+    <div class="container-fluid  p-5 ">
+        <h1 class=" text-7xl text-center font-bold p-2" style= "font-family: Itc-bodoni-175,serif;" >Shop</h1>
+        <h2 class="text-gray-500 text-center p-2 " style="font-family: 'Times New Roman', Times, serif;">HOME/SHOP</h2>
+        <!-- <h1 class=" text-center  display-6 p-4 text-gray-500">Elevate your decor with a whimsical touch your room needs for a pop of personality</h1> -->
+    
+      </div>
+        <div class="mt-1 flex items-center justify-between">
+            <div class="flex rounded border border-gray-100">
+           
+          
+        </div>
+
+        <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 p-5 bg-body-tertiary">
+         
+            {%for p in data%}
+            <li>
+                <a href="{%url 'product-detail' p.id%}"class="group block overflow-hidden p-3" >
+                    {%if p.picture%}
+                    <img src="{{p.picture.url}}"
+                    alt=""
+                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
+                    {%else%}
+
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    alt=""
+                    class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
+                    {%endif%}
+
+                    <div class="relative bg-white pt-3">
+                        <h1 class=" text-gray-700 ">
+                          {{p.name}}
+                        </h1>
+
+                        <p class="mt-2">
+                            <span class="sr-only">{{p.price}}</span>
+
+                            <span class="tracking-wider text-gray-900"> {{p.price}} </span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            {%endfor%}
+
+           
+
+            
+
+           
+        </ul>
+    </div>
+</section>
+
+{%if page_obj.has_previous%}
+<a href="?page={{page_obj.previous_page_number}}">Previous</a>
+{%endif%}
+
+{%if page_obj.has_next%}
+<a href="?page={{page_obj.next_page_number}}">Next</a>
+{%endif%}
+
+
+{%endblock%}
+
+
+
