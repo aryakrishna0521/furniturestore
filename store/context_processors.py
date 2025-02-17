@@ -5,3 +5,9 @@ def cart_count_context(request):
     if request.user.is_authenticated:
         count=BasketItem.objects.filter(Basket_object=request.user.cart,is_order_placed=False).count()
     return {"item_count":count}
+
+
+def tables_count_context(request):
+    table=Furniture.objects.filter(type_object="tables")
+    tables_count=count(table)
+    return {"tables_count":tables_count}

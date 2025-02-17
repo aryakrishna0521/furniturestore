@@ -33,7 +33,7 @@
     }
 </style>
 
-<nav class=" navbar-expand-lg ">
+<nav class=" navbar-expand-lg  " style="background-color: white;">
     <div class="container-fluid">
 
       <div class="">
@@ -55,15 +55,15 @@
             <a class="nav-link  text-xl"style="padding-top: 20px; padding-right: 500px; "  href="#">contact us</a>
           </li> -->
          
-          <div class="sm:flex sm:gap-4" style="padding-top: 10px; margin-left: 50%;">
+          <div class="sm:flex sm:gap-4" style="padding-top: 5px; margin-left: 50%; padding-bottom: 5px;">
             <a
               class="btn btn-outline-dark p-2" href="{%url 'log-out'%}"
             >
               Logout
             </a>
   
-              <a class="btn btn-outline-dark  " >
-            <i class="fa-solid fa-cart-shopping"></i> 
+              <a class="btn btn-outline-dark  " href="{% url 'cart-summary'%}" >
+            <i class="fa-solid fa-cart-shopping"  ></i> 
              <span class="badge text-bg-dark rounded-circle">{{item_count}} </span></a>
           </div>
         </ul>
