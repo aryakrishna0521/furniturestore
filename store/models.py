@@ -121,3 +121,4 @@ def create_basket(sender,instance,created,**kwargs):
         Basket.objects.create(owner=instance)
 post_save.connect(create_basket,User)
 
+asss
